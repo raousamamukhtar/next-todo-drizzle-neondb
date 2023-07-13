@@ -2,13 +2,16 @@ import { Todo } from "@/lib/drizzle";
 
 const getData = async () => {
   try {
-    const res = await fetch("http://127.0.0.1:3000/api/todo", {
-      method: "GET",
-      cache: "no-store",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      "http://todo-2hw1gbyfr-rmusama.vercel.app/api/todo",
+      {
+        method: "GET",
+        cache: "no-store",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (!res.ok) {
       throw new Error("Failed to fetch the data");
     }
