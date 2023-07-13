@@ -26,7 +26,10 @@ const TodoList = async () => {
     <div className="max-h-[350px] overflow-auto mb-4 ">
       {data.data.map((item) => {
         return (
-          <div className="bg-gray-100 py-4 px-4 flex items-center gap-x-3 shadow rounded-lg my-5">
+          <div
+            className="bg-gray-100 py-4 px-4 flex items-center gap-x-3 shadow rounded-lg my-5"
+            key={item.id}
+          >
             {/* Circle */}
             <div className="h-3 w-3 bg-secondary rounded-full"></div>
             {/* Task Title */}
